@@ -80,6 +80,11 @@
             },
             linkList() {
                 this.sliceLinkList(this.currentPage);
+            },
+            slicedLinkList() {
+                if (this.slicedLinkList.length === 0) {
+                    this.sliceLinkList(1);
+                }
             }
         }
     }

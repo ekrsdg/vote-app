@@ -20,14 +20,14 @@ const state = {
 };
 
 const store = new Vuex.Store({modules: {links: {state}}});
-
+const filterList = jest.fn();
+const sliceLinkList = jest.fn();
 
 beforeEach(() => {
     wrapper = shallowMount(ListLink, {localVue, store});
 });
 describe('ListLink Component', () => {
-    const filterList = jest.fn();
-    const sliceLinkList = jest.fn();
+
     test('it should call filterList and sliceLinkList on created', async () => {
         const wrapper = shallowMount(ListLink,
             {
@@ -81,5 +81,10 @@ describe('ListLink Component', () => {
         wrapper.vm.openToastr(toastObject);
         expect(wrapper.vm.$data.toastrObject).toEqual(toastObject);
         expect(wrapper.vm.$data.toastrObject).toBeTruthy();
+    });
+
+    it('should set current page 1 when current page have not links', () => {
+        wrapper.vm.$data.slicedLinkList = [];
+        expect(sliceLinkList).toBeCalledWith(1);
     });
 });
