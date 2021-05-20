@@ -1,0 +1,67 @@
+@import 'variable.scss';
+
+p, h1, h2, h3, h4, h5, h6, a {
+  margin: 0;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
+}
+
+.primary-text {
+  font-size: $fs-small;
+  text-align: start;
+  color: $c-black;
+
+  &.green {
+    color: $c-green;
+  }
+
+  &.yellow {
+    color: $c-yellow;
+  }
+
+  &.red {
+    color: $c-red;
+  }
+
+  &.gray {
+    color: $c-gray;
+  }
+
+  &.small {
+    font-size: $fs-small;
+  }
+
+  &.medium {
+    font-size: $fs-medium;
+  }
+
+  &.large {
+    font-size: $fs-large;
+  }
+
+  &.x-large {
+    font-size: $fs-xLarge;
+  }
+  &.xx-large{
+    font-size: $fs-xxLarge;
+  }
+
+  &.bold {
+    font-weight: 600;
+  }
+
+  &.thin {
+    font-weight: 300;
+  }
+}
+
+.primary-icon {
+  &.red {
+    color: $c-red;
+  }
+
+  &.black {
+    color: $c-black;
+  }
+}
